@@ -1,0 +1,97 @@
+:root {
+    --primary-color: rgb(134, 4, 194);
+    --dark-color-text: #2d2d2d;
+    --submit-color: rgb(4, 194, 141);
+}
+
+.admin-signUp-form {
+    width: 98%;
+    margin: .5rem 0;
+    border: 1px solid rgba(128, 128, 128, 0.37);
+    border-radius: 5px;
+    padding: 1.3rem ;
+    display: flex;
+    flex-flow: column nowrap;
+    opacity: 1;
+}
+.admin-signUp-form .form-input {
+    margin: .5rem 0;
+    color: var(--dark-color-text);
+    cursor: pointer;
+}
+.admin-signUp-form :is(.form-input input, .form-input textarea){
+    margin-top: .55rem;
+    width: clamp(300px,48%,500px);
+    height: 34px;
+    padding: 2px 8px;
+    border: 1px solid rgba(128, 128, 128, 7.37);
+    border-radius: 4px;
+    font-family: Vazir-Digit,sans-serif;
+}
+.admin-signUp-form .form-input textarea {
+    height: 200px;
+}
+.admin-signUp-form :is(.form-input input:focus,.form-input textarea:focus){
+    outline-color: var(--primary-color);
+}
+.admin-signUp-form.close {
+    display: none;
+    opacity: 0;
+}
+.mobileNumber-label {
+    position: relative;
+} 
+.mobileNumber-label input[type='tell'] {
+    border-radius: 0 4px 4px 0;
+}  
+.mobileNumber-label button.addMobileNumber-btn {
+    padding: .35rem 1.3rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: Vazir;
+   margin-right: -70px;
+   position: relative;
+   border-radius: 4px 0 0 4px;
+   cursor: pointer;
+   border: 1px solid transparent;
+}
+.mobileNumber-label button.addMobileNumber-btn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.admin-signUp-form .form-input .inputMapSelect {
+    width: clamp(200px,20%,360px) !important;
+    border: 1px solid var(--primary-color);
+    background-color: rgba(134,4,194,.15);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.admin-signUp-form .form-input .inputMapSelect:hover {
+    background-color: rgba(134,4,194,.22);
+}
+.shippingCost-input{
+    position: relative;
+}
+.shippingCost-input::before {
+    content: "ریال";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: #696868;
+    width: 20px;
+    height: 30px;
+}
+.create-restaurant-btn {
+    align-self: flex-end;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: .6rem 1.3rem;
+    color: #fff;
+    font-family: Vazir;
+    background-color: var(--submit-color);
+}
+.create-restaurant-btn:hover {
+    background-color: rgb(4, 165, 119);;
+}
