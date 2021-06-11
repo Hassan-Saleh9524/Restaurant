@@ -1,0 +1,35 @@
+:root {
+    --primary-color: rgb(134, 4, 194);
+    --dark-color-text: #2d2d2d;
+    --active-item-color: rgb(221, 13, 152);
+}
+
+.admin-panel {
+    align-self: flex-start;
+    height: 100%;
+}
+.admin-panel .hero-icons {
+    stroke: var(--primary-color);
+    width: 32px;
+    margin-left: .37rem;
+}
+.admin-panel .panel-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: .6rem .68rem;
+    border-bottom: 3px solid var(--primary-color);
+    background-color: rgba(134, 4, 194,.08);
+    font-size: .85rem;
+    cursor: pointer;
+    font-family: Vazir-Thin;
+}
+.admin-panel .panel-item:hover ,
+    .admin-panel .panel-item.active {
+    transform: translateX(-8px);
+}
+.admin-panel .panel-item.active .hero-icons,
+.admin-panel .panel-item.active {
+    stroke: var(--active-item-color);
+    border-color: var(--active-item-color);
+}

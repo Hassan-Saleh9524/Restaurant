@@ -1,3 +1,24 @@
+import PanelItem from './PanelItem';
+import './AdminPanel.css';
 export default function AdminPanel() {
-    return <h3>Admin Panel</h3>
+    return (
+        <aside className="admin-panel">
+            <PanelItem 
+                        itemTitle="رستوران من" 
+                        itemClassName="userIcon"
+                        />
+            <PanelItem 
+                        itemTitle="غذاها" 
+                        itemClassName="cakeIcon"
+                        />
+            <PanelItem 
+                        itemTitle="کوپن ها" 
+                        itemClassName="cashIcon"
+                        />
+            <PanelItem 
+                        itemTitle="ثبت غذای جدید" 
+                        itemClassName="plusIcon"
+                        />
+        </aside>
+    )
 }

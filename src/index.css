@@ -11,6 +11,12 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: Vazir-Thin;
+  src: url("asset/fonts/vazir-font/Vazir-Thin.woff"),
+      url("asset/fonts/vazir-font/Vazir-Thin.woff2");
+  font-weight: 200;
+}
+@font-face {
   font-family: Vazir-Digit;
   src: url("asset/fonts/vazir-font/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff"),
        url("asset/fonts/vazir-font/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2");
