@@ -13,7 +13,7 @@ export default function AdminFrontend() {
 
         <div className="panel-section-container">
         <AdminPanel />
-        <MyRestaurantSection />
+        <MyRestaurantSection mobileNumbers={["09122552", "335592532"]}/>
         </div>
        </main>
     )

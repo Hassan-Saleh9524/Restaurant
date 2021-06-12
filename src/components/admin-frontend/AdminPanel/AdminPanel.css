@@ -8,10 +8,11 @@
     align-self: stretch;
     height: 100%;
 }
-.admin-panel .hero-icons {
+.admin-panel .hero-icons ,
+.my-restaurant .hero-icons{
     stroke: var(--primary-color);
     width: 32px;
-    margin-left: .37rem;
+    margin-left: .47rem;
 }
 .admin-panel .panel-item {
     display: flex;
@@ -45,4 +46,49 @@
     border-radius: 5px;
     padding: 1.3rem;
     width: 70%;
+    color: var(--dark-color-text);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    row-gap: 7px;
+    font-family: 'Vazir-Digit';
+}
+.my-restaurant .restaurant-name {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .45rem;
+    font-size: 1.85rem;
+}
+.my-restaurant .hero-icons {
+    width: 23px;
+}
+.restaurant-detail-item {
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+}
+.restaurantNumbers-container {
+    display: flex;
+    column-gap: 25px;
+    flex-flow: row wrap;
+    row-gap: 10px;
+}
+.restaurantNumbers-container > div {
+    padding: .35rem .7rem;
+    background-color: rgba(134, 4, 194,.08);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.restaurantNumbers-container > div:hover {
+    background-color: rgba(134, 4, 194,.13);
+    
+}
+span.details-span {
+    color: var(--primary-color);
+    margin-right: .5rem;
+    font-size: 15px;
+}
+.our-location-service span {
+    display: block;
+    margin: .7rem 0 1rem;
 }
