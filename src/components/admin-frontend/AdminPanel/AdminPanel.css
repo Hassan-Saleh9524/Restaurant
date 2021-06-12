@@ -19,7 +19,7 @@
     flex-flow: row nowrap;
     align-items: center;
     padding: .6rem .68rem;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     background-color: rgba(134, 4, 194,.08);
     font-size: .85rem;
     cursor: pointer;

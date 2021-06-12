@@ -11,8 +11,8 @@ export default function MyRestaurantSection(props) {
         return (
             <section className="my-restaurant">
                 <h2 className="restaurant-name">{restaurantName || 'رستوران سارای' }</h2>
-                <ShowAddress address={restaurantAddress || "شهریار دانشگاه آزاد"} />
-                <ShowMobileNumbers numbers={mobileNumbers} />
+                <ShowAddress address={restaurantAddress || "تهران، میدان انقلاب، دانشگاه تهران"} />
+                <ShowMobileNumbers numbers={mobileNumbers || ["09123456789", "33556421"]} />
                 <div className="our-location-service">
                     <span>مناطق سرویس دهی ما:</span> 
                     <iframe title="my services location">map</iframe>
