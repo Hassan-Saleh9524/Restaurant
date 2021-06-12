@@ -2,6 +2,7 @@ import PanelItem from './PanelItem';
 import './AdminPanel.css';
 export default function AdminPanel() {
     return (
+ 
         <aside className="admin-panel">
             <PanelItem 
                         itemTitle="رستوران من" 
@@ -20,5 +21,6 @@ export default function AdminPanel() {
                         itemClassName="plusIcon"
                         />
         </aside>
+    
     )
 }

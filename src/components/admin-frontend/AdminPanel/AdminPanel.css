@@ -5,7 +5,7 @@
 }
 
 .admin-panel {
-    align-self: flex-start;
+    align-self: stretch;
     height: 100%;
 }
 .admin-panel .hero-icons {
@@ -32,4 +32,17 @@
 .admin-panel .panel-item.active {
     stroke: var(--active-item-color);
     border-color: var(--active-item-color);
+}
+
+.panel-section-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+.panel-section-container .my-restaurant {
+    border: 1px solid rgba(128,128,128,.37);
+    border-radius: 5px;
+    padding: 1.3rem;
+    width: 70%;
 }
