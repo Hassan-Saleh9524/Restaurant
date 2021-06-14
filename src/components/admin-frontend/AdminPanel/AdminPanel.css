@@ -38,19 +38,24 @@
 .panel-section-container {
     width: 100%;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 1.2rem;
+    gap: 1rem;
 }
-.panel-section-container .my-restaurant {
+.panel-section-container .my-restaurant{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+.panel-section-container .my-restaurant ,
+.panel-section-container .food-section{
     border: 1px solid rgba(128,128,128,.37);
     border-radius: 5px;
     padding: 1.3rem;
     width: 70%;
     color: var(--dark-color-text);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    row-gap: 7px;
+    gap: 1rem;
     font-family: 'Vazir-Digit';
 }
 .my-restaurant .restaurant-name {
@@ -91,4 +96,101 @@ span.details-span {
 .our-location-service span {
     display: block;
     margin: .7rem 0 1rem;
+}
+
+.food-section {
+    display: flex;
+    flex-flow:column nowrap;
+    
+}
+.food-section .food-item {
+    width: clamp(220px,65%,450px);
+    border: 1px solid rgba(128,128,128,.37);
+    padding: .8rem .8rem 1rem;
+    border-radius: 5px;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+}
+.food-item .food-img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: brightness(.73);
+    -webkit-filter: brightness(.73);
+    -moz-filter: brightness(.73);
+}
+.food-item > footer {
+    width: 100%;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.food-item .food-price {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-left: 2rem; 
+    position: relative;
+}
+.food-item .food-price::after {
+    content: 'تومان';
+    color: var(--primary-color);
+    position: absolute;
+    left: -2rem;
+    top: .35rem;
+    font-size: .8rem;    
+}
+.food-item .food-count {
+    color: var(--primary-color);
+    margin-right: .3rem;
+    font-size: 1.1rem;
+}
+.food-item .food-restaurantName {
+    font-size: .8rem;
+}
+.food-item .food-name {
+    display: inline-block;
+    margin-bottom: .3rem;
+}
+.food-item:hover .food-toolbar{
+    transform: translateY(0);
+    pointer-events: all;
+    opacity: 1;
+}
+.food-item .food-toolbar {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    width: 155px;
+    left: -155px;
+    top: 0;
+    gap: .2rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+}
+.food-item .food-toolbar button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-family: Vazir;
+    padding-right: .3rem;
+    border: 0;
+    cursor: pointer;
+}
+.food-item .food-toolbar button:hover {
+    transform: translate(-5px);
+}
+.food-item .food-toolbar button:hover .hero-icons{
+    stroke: #fff;
+    fill: var(--active-item-color);
+}
+.food-item .food-toolbar .hero-icons {
+    width: 32px;
+    transition: none    ;
+    margin-left: .32rem;
+    stroke: var(--active-item-color);
 }
