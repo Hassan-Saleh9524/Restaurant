@@ -1,3 +1,4 @@
+@import '../AdminSignUp/AdminSignUp.css';
 :root {
     --primary-color: rgb(134, 4, 194);
     --dark-color-text: #2d2d2d;
@@ -48,8 +49,7 @@
     flex-flow: column nowrap;
     align-items: flex-start;
 }
-.panel-section-container .my-restaurant ,
-.panel-section-container .food-section{
+.panel-section-container .panel-section{
     border: 1px solid rgba(128,128,128,.37);
     border-radius: 5px;
     padding: 1.3rem;
@@ -193,4 +193,43 @@ span.details-span {
     transition: none    ;
     margin-left: .32rem;
     stroke: var(--active-item-color);
+}
+.coupon-section .coupon-format {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: .4rem;
+    background-color: rgba(134, 4, 194,.13);
+    padding: 1rem 1.4rem;
+    border-radius: 5px;
+    border: 2px solid rgba(134, 4, 194,.13);
+}
+.coupon-format .highlight {
+    color: var(--active-item-color);
+}
+
+
+ .form-input {
+    margin: .5rem 0;
+    color: var(--dark-color-text);
+    cursor: pointer;
+}
+.form-input input{
+    margin-top: .55rem;
+    width: 55px;
+    height: 30px;
+    padding: 2px 8px;
+    border: 1px solid rgba(128, 128, 128, 7.37);
+    border-radius: 4px;
+    font-family: Vazir-Digit,sans-serif;
+}
+.form-input select {
+    border: 1px solid rgba(128, 128, 128, 7.37);
+    font-family: Vazir;
+    border-radius: 4px;
+    margin: .2rem;
+}
+.form-input input:focus,
+.form-input select:focus{
+    outline-color: var(--primary-color);
 }

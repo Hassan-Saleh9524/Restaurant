@@ -7,7 +7,7 @@ export default function MyRestaurantSection() {
         const context = useContext(AdminContext);
 
         return (
-            <section className="my-restaurant">
+            <section className="my-restaurant panel-section">
                 <h2 className="restaurant-name">{context.restaurantName}</h2>
                 <ShowAddress />
                 <ShowMobileNumbers />
