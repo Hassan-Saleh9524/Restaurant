@@ -18,7 +18,7 @@ export default function NewFoodSection() {
                     تعداد موجودی:  <br />
                     <input type="number" id="newFood-inventory" />
             </label>
-            <button type="button" className="create-newFood-btn">ایجاد</button>
+            <button type="button" className="create-newFood-btn">اضافه کن</button>
 
             </form>
         </section>
