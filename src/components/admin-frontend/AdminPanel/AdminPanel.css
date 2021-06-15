@@ -3,6 +3,7 @@
     --primary-color: rgb(134, 4, 194);
     --dark-color-text: #2d2d2d;
     --active-item-color: rgb(221, 13, 152);
+    --submit-color: rgb(4, 194, 141);
 }
 
 .admin-panel {
@@ -206,6 +207,10 @@ span.details-span {
 }
 .coupon-format .highlight {
     color: var(--active-item-color);
+    text-decoration: underline;
+}
+.coupon-format > div {
+    margin-right: 1rem;
 }
 
 
@@ -214,8 +219,10 @@ span.details-span {
     color: var(--dark-color-text);
     cursor: pointer;
 }
+.form-input > * {
+    margin: 0 .37rem;
+}
 .form-input input{
-    margin-top: .55rem;
     width: 55px;
     height: 30px;
     padding: 2px 8px;
@@ -228,8 +235,40 @@ span.details-span {
     font-family: Vazir;
     border-radius: 4px;
     margin: .2rem;
+    padding: 0 .2rem;
+    height: 30px;
 }
 .form-input input:focus,
 .form-input select:focus{
     outline-color: var(--primary-color);
+}
+.form-input select option {
+    color: var(--primary-color);
+    background-color: #fff;
+}
+.form-input select option:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.coupon-section .insert-coupon {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+    margin: 1rem 0;
+}
+
+.create-coupon-btn {
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: .6rem 1.3rem;
+    color: #fff;
+    font-family: Vazir;
+    background-color: var(--submit-color);
+}
+.create-coupon-btn:hover {
+    background-color: rgb(4, 165, 119);
+
 }
