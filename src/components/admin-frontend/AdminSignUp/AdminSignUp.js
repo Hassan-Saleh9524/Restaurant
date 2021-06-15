@@ -10,7 +10,7 @@ import SubmitButton from './SubmitButton';
 
 export default function AdminSignUp() {
     const [display,setDisplay] = useState(false);
-    const [formClassName,setFormClassName] = useState('close');
+    const [formClassName,setFormClassName] = useState('');
     const activeDates = ['روزهای فرد','روزهای زوج','تمام روزها'];
     const workingTimes = [
         '10 صبح الی 23 شب',
@@ -79,7 +79,7 @@ export default function AdminSignUp() {
                            inputType="number"
                 />
                 <SubmitButton inputId="create-restaurant-btn"
-                              inputType="button"
+                              inputType="submit"
                               onClick={toggleFormDisplay}
                                />
             </form>

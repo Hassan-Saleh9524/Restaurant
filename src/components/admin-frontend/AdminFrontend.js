@@ -13,6 +13,7 @@ import './AdminFrontend.css';
 export default function AdminFrontend() {
     let activeSection=null;
     const [section, setSection] = useState(0);
+
     switch (section) {
         case 'newFood-section':
            activeSection =  <NewFoodSection />
@@ -32,12 +33,12 @@ export default function AdminFrontend() {
     }
     const default_restaurant_datails =
     {
-        restaurantName: 'رستوران سارای',
-        restaurantAddress: 'تهران، خیابان 15 خرداد، کوچه ی هفت تن',
-        mobileNumbers: ['00000', '11111', '22222'],
-        workingTime: '7 صبح تا 22 شب',
-        activeDates: 'همه روزه جز جمعه ها',
-        shippingCost: '12 هزار تومان'
+        restaurantName: 'نام رستوران',
+        restaurantAddress: 'آدرس رستوران اینجا قرار میگیرد',
+        mobileNumbers: ['09123456789', '0213565502'],
+        workingTime: 'از ساعت فلان تا ساعت بسار',
+        activeDates: 'همه ی روز ها',
+        shippingCost: 'فلان قدر تومان'
     };
 
     return (
