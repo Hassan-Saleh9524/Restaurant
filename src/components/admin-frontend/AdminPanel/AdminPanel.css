@@ -14,7 +14,7 @@
     top: 0;
 }
 .admin-panel .hero-icons ,
-.my-restaurant .hero-icons{
+.myRestaurant-section .hero-icons{
     stroke: var(--primary-color);
     width: 32px;
     margin-left: .47rem;
@@ -48,7 +48,7 @@
     padding: 1.2rem;
     gap: 1rem;
 }
-.panel-section-container .my-restaurant{
+.panel-section-container .myRestaurant-section{
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -62,13 +62,13 @@
     gap: 1rem;
     font-family: 'Vazir-Digit';
 }
-.my-restaurant .restaurant-name {
+.myRestaurant-section .restaurant-name {
     width: 100%;
     text-align: center;
     margin-bottom: .45rem;
     font-size: 1.85rem;
 }
-.my-restaurant .hero-icons {
+.myRestaurant-section .hero-icons {
     width: 23px;
 }
 .restaurant-detail-item {

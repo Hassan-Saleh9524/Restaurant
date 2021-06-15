@@ -1,4 +1,6 @@
 
+import { useContext } from "react";
+import { SectionsContext } from "../SectionsContext";
 const userIcon = <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 hero-icons" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
 </svg>;
@@ -18,12 +20,12 @@ const plusIcon = <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hero
 const heroIcons = {userIcon, cakeIcon, cashIcon, plusIcon};
 
 export default function PanelItem(props) {
-    
+    const [section, setSection] = useContext(SectionsContext);
     const {itemTitle,itemClassName} = { ...props };
 
     const selectedIcon = heroIcons[itemClassName]
         return (
-            <div className="panel-item">
+            <div className="panel-item" onClick={()=> setSection(section+section)}>
                 {selectedIcon}
                 <h3>{itemTitle}</h3>
             </div>
