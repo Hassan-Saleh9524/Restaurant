@@ -2,6 +2,7 @@ import AdminSignUp from './AdminSignUp/AdminSignUp';
 import AdminPanel from './AdminPanel/AdminPanel';
 import MyRestaurantSection from './AdminPanel/MyRestaurantSection/MyRestaurantSection';
 import FoodSection from './AdminPanel/FoodSection/FoodSection';
+import NewFoodSection from './AdminPanel/NewFoodSection/NewFoodSection';
 import CouponSection from './AdminPanel/CouponSection/CouponSection';
 import { AdminContext } from './AdminContext';
 import './AdminFrontend.css';
@@ -32,7 +33,7 @@ export default function AdminFrontend() {
                 </AdminContext.Provider>
                 <FoodSection />
                 <CouponSection />
-
+                <NewFoodSection />
             </div>
 
         </main>

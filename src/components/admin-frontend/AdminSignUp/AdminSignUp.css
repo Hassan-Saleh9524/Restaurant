@@ -21,7 +21,7 @@
 }
 .admin-signUp-form :is(.form-input input, .form-input textarea){
     margin-top: .55rem;
-    width: clamp(300px,48%,500px);
+    width: clamp(250px,48%,500px);
     height: 34px;
     padding: 2px 8px;
     border: 1px solid rgba(128, 128, 128, 7.37);

@@ -9,6 +9,9 @@
 .admin-panel {
     align-self: stretch;
     height: 100%;
+    position: sticky;
+    z-index: 2;
+    top: 0;
 }
 .admin-panel .hero-icons ,
 .my-restaurant .hero-icons{
@@ -22,7 +25,7 @@
     align-items: center;
     padding: .6rem .68rem;
     border-bottom: 2px solid var(--primary-color);
-    background-color: rgba(134, 4, 194,.08);
+    background-color:rgb(245, 230, 252);
     font-size: .85rem;
     cursor: pointer;
     font-family: Vazir-Thin;
@@ -81,7 +84,7 @@
 }
 .restaurantNumbers-container > div {
     padding: .35rem .7rem;
-    background-color: rgba(134, 4, 194,.08);
+    background-color: rgb(245, 230, 252);
     border-radius: 3px;
     cursor: pointer;
 }
@@ -259,7 +262,8 @@ span.details-span {
     margin: 1rem 0;
 }
 
-.create-coupon-btn {
+.create-coupon-btn,
+.create-newFood-btn {
     border: 0;
     cursor: pointer;
     border-radius: 4px;
@@ -268,7 +272,29 @@ span.details-span {
     font-family: Vazir;
     background-color: var(--submit-color);
 }
-.create-coupon-btn:hover {
+
+.create-coupon-btn:hover,
+.create-newFood-btn:hover {
     background-color: rgb(4, 165, 119);
 
+}
+.newFood-section .form-input {
+    width: 100%;  
+}
+.newFood-section .form-input input {
+    margin-top: .55rem;
+    width: clamp(250px,48%,500px);
+    height: 34px;
+    padding: 2px 8px;
+    border: 1px solid rgba(128, 128, 128, 7.37);
+    border-radius: 4px;
+    font-family: Vazir-Digit,sans-serif;
+}
+.create-newFood-btn {
+    align-self: flex-end;
+}
+.newFood-section >form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .8rem;
 }
