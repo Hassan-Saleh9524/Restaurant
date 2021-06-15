@@ -20,12 +20,12 @@ const plusIcon = <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hero
 const heroIcons = {userIcon, cakeIcon, cashIcon, plusIcon};
 
 export default function PanelItem(props) {
-    const [section, setSection] = useContext(SectionsContext);
-    const {itemTitle,itemClassName} = { ...props };
+    const [ setSection] = useContext(SectionsContext);
+    const {itemTitle,itemClassName,targetSection} = { ...props };
 
     const selectedIcon = heroIcons[itemClassName]
         return (
-            <div className="panel-item" onClick={()=> setSection(section+section)}>
+            <div className="panel-item" onClick={()=> setSection(targetSection)}>
                 {selectedIcon}
                 <h3>{itemTitle}</h3>
             </div>

@@ -11,7 +11,25 @@ import { SectionsContext } from './SectionsContext';
 import './AdminFrontend.css';
 
 export default function AdminFrontend() {
-    const [ section, setSection ] = useState(0);
+    let activeSection=null;
+    const [section, setSection] = useState(0);
+    switch (section) {
+        case 'newFood-section':
+           activeSection =  <NewFoodSection />
+            break;
+        case 'myRestaurant-section':
+            activeSection = <MyRestaurantSection />
+            break;
+        case 'food-section':
+            activeSection = <FoodSection />
+            break;
+        case 'coupon-section':
+            activeSection = <CouponSection />
+            break;
+        default:
+            activeSection = <MyRestaurantSection />
+            break;
+    }
     const default_restaurant_datails =
     {
         restaurantName: 'رستوران سارای',
@@ -26,21 +44,19 @@ export default function AdminFrontend() {
         <main className="admin-main">
             <header className="admin-header">
                 <h1>ثبت نام مدیر رستوران</h1>
-                <h2>{section}</h2>
+
             </header>
             <AdminSignUp />
 
             <div className="panel-section-container">
                 <AdminContext.Provider value={default_restaurant_datails}>
-                    <SectionsContext.Provider value={[section, setSection]} >
+                    <SectionsContext.Provider value={[setSection]} >
                         <AdminPanel />
                     </SectionsContext.Provider>
-                    <MyRestaurantSection />
 
+
+                   {activeSection}
                 </AdminContext.Provider>
-                <FoodSection />
-                <CouponSection />
-                <NewFoodSection />
             </div>
 
         </main>
