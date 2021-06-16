@@ -215,7 +215,9 @@ span.details-span {
 .coupon-format > div {
     margin-right: 1rem;
 }
-
+input#coupon-freeRate {
+    width: 120px ;
+}
 
  .form-input {
     margin: .5rem 0;

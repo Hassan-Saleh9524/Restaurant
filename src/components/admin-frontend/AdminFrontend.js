@@ -18,7 +18,7 @@ export default function AdminFrontend() {
         mobileNumbers: ['09123456789', '0000'],
         workingTime: 'از ساعت فلان تا ساعت بسار',
         activeDates: 'همه ی روز ها',
-        shippingCost: 'فلان قدر تومان'
+        shippingCost: 'فلان قدر '
     };
     let activeSection=null;
     const [section, setSection] = useState(0);
