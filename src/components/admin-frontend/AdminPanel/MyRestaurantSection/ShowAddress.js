@@ -6,11 +6,11 @@ const locationIcon = <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 
 </svg>;
 
 export default function ShowAddress() {
-    const context = useContext(AdminContext);
+    const restaurantContext = useContext(AdminContext);
     return (
         <address className="restaurant-detail-item">
             {locationIcon} 
-            {context.restaurantAddress}
+            {restaurantContext.restaurantAddress}
         </address>
     )
 } 

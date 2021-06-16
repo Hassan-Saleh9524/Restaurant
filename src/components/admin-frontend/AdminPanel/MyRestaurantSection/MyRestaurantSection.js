@@ -4,11 +4,11 @@ import ShowMobileNumbers from './ShowMobileNumbers';
 import { AdminContext } from "../../AdminContext";
 
 export default function MyRestaurantSection() {
-        const context = useContext(AdminContext);
+        const restaurantContext = useContext(AdminContext);
 
         return (
             <section className="myRestaurant-section panel-section">
-                <h2 className="restaurant-name">{context.restaurantName}</h2>
+                <h2 className="restaurant-name">{restaurantContext.restaurantName}</h2>
                 <ShowAddress />
                 <ShowMobileNumbers />
                 <div className="our-location-service">
@@ -18,19 +18,21 @@ export default function MyRestaurantSection() {
                 <div className="restaurant-detail-item">
                 ساعات کاری: 
                 <span className="details-span">
-                    {context.workingTime}
+                    {restaurantContext.workingTime}
                 </span>
                 </div>
                 <div className="restaurant-detail-item">
                 روزهای فعالیت:
                 <span className="details-span">
-                    {context.activeDates}
+                    {restaurantContext.activeDates}
                 </span> 
                 </div>
                 <div className="restaurant-detail-item">
                 هزینه ثابت ارسال غذا:
                 <span className="details-span">
-                    {context.shippingCost}
+                    {restaurantContext.shippingCost}
+                    &nbsp;
+                    ریال
                 </span>
                 </div>
             </section>

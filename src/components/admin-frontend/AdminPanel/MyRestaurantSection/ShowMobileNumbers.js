@@ -5,11 +5,11 @@ const phoneIcon = <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 her
 </svg>;
 
 export default function ShowMobileNubmers() {
-    const context = useContext(AdminContext)
+    const restaurantContext = useContext(AdminContext)
     return (
         <div className="restaurantNumbers-container">
         {
-          context.mobileNumbers.map((num,index)=>{
+          restaurantContext.mobileNumbers.map((num,index)=>{
           return  <div key={index}  className="restaurant-detail-item">
                     {phoneIcon}
                     <span>{num}</span>

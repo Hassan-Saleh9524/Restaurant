@@ -1,4 +1,3 @@
-
 export default function CouponSection() {
     return (
         <section className="coupon-section panel-section">
