@@ -1,12 +1,13 @@
-import FoodItem from "./FoodItem"
+import React,{useState} from 'react';
+import FoodItem from "./FoodItem";
+import { FoodContext } from "./FoodContext";
 export default function FoodSection() {
+    const [foodItems, setFoodItems] = useState([<FoodItem key="0" />,<FoodItem key="02"/>])
     return (
         <section className="food-section panel-section">
-            <FoodItem />
-            <FoodItem />
-            <FoodItem />
-            <FoodItem />
-            <FoodItem />
+            <FoodContext.Provider value={[foodItems, setFoodItems]} >
+              {foodItems}
+            </FoodContext.Provider>
         </section>
     )
 }
