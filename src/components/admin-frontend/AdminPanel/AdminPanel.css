@@ -1,302 +1,318 @@
-@import '../AdminSignUp/AdminSignUp.css';
+@import "../AdminSignUp/AdminSignUp.css";
 :root {
-    --primary-color: rgb(134, 4, 194);
-    --dark-color-text: #2d2d2d;
-    --active-item-color: rgb(221, 13, 152);
-    --submit-color: rgb(4, 194, 141);
+  --primary-color: rgb(134, 4, 194);
+  --dark-color-text: #2d2d2d;
+  --active-item-color: rgb(221, 13, 152);
+  --submit-color: rgb(4, 194, 141);
 }
 
 .admin-panel {
-    align-self: stretch;
-    height: 100%;
-    position: sticky;
-    z-index: 2;
-    top: 0;
+  align-self: stretch;
+  height: 100%;
+  position: sticky;
+  z-index: 2;
+  top: 0;
 }
-.admin-panel .hero-icons ,
-.myRestaurant-section .hero-icons{
-    stroke: var(--primary-color);
-    width: 32px;
-    margin-left: .47rem;
+.admin-panel .hero-icons,
+.myRestaurant-section .hero-icons {
+  stroke: var(--primary-color);
+  width: 32px;
+  margin-left: 0.47rem;
 }
 .admin-panel .panel-item {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: .6rem .68rem;
-    border-bottom: 2px solid var(--primary-color);
-    background-color:rgb(245, 230, 252);
-    font-size: .85rem;
-    cursor: pointer;
-    font-family: Vazir-Thin;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0.6rem 0.68rem;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: rgb(245, 230, 252);
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: Vazir-Thin;
 }
-.admin-panel .panel-item:hover ,
-    .admin-panel .panel-item.active {
-    transform: translateX(-8px);
+.admin-panel .panel-item:hover,
+.admin-panel .panel-item.active {
+  transform: translateX(-8px);
 }
 .admin-panel .panel-item.active .hero-icons,
 .admin-panel .panel-item.active {
-    stroke: var(--active-item-color);
-    border-color: var(--active-item-color);
+  stroke: var(--active-item-color);
+  border-color: var(--active-item-color);
 }
 
 .panel-section-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 1.2rem;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 1.2rem;
+  gap: 1rem;
 }
-.panel-section-container .myRestaurant-section{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
+.panel-section-container .myRestaurant-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
 }
-.panel-section-container .panel-section{
-    border: 1px solid rgba(128,128,128,.37);
-    border-radius: 5px;
-    padding: 1.3rem;
-    width: 70%;
-    color: var(--dark-color-text);
-    gap: 1rem;
-    font-family: 'Vazir-Digit';
+.panel-section-container .panel-section {
+  border: 1px solid rgba(128, 128, 128, 0.37);
+  border-radius: 5px;
+  padding: 1.3rem;
+  width: 70%;
+  color: var(--dark-color-text);
+  gap: 1rem;
+  font-family: "Vazir-Digit";
 }
 .myRestaurant-section .restaurant-name {
-    width: 100%;
-    text-align: center;
-    margin-bottom: .45rem;
-    font-size: 1.85rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.45rem;
+  font-size: 1.85rem;
 }
 .myRestaurant-section .hero-icons {
-    width: 23px;
+  width: 23px;
 }
 .restaurant-detail-item {
-    display: flex;
-    align-items: center;
-    margin: .5rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 .restaurantNumbers-container {
-    display: flex;
-    column-gap: 25px;
-    flex-flow: row wrap;
-    row-gap: 10px;
+  display: flex;
+  column-gap: 25px;
+  flex-flow: row wrap;
+  row-gap: 10px;
 }
-.restaurantNumbers-container > div {
-    padding: .35rem .7rem;
-    background-color: rgb(245, 230, 252);
-    border-radius: 3px;
-    cursor: pointer;
+div.restaurant-detail-item,
+.added-numbers {
+  padding: 0.35rem 0.7rem;
+  background-color: rgb(245, 230, 252);
+  border-radius: 3px;
+  cursor: pointer;
+  width: fit-content;
 }
-.restaurantNumbers-container > div:hover {
-    background-color: rgba(134, 4, 194,.13);
-    
+div.restaurant-detail-item:hover,
+.added-numbers {
+  background-color: rgba(134, 4, 194, 0.13);
+}
+div.added-numbers {
+  margin: 0.3rem;
+  position: relative;
+}
+div.added-numbers:hover::after {
+  opacity: 1;
+}
+div.added-numbers::after {
+  top: 9px;
+  left: -12px;
+  content: "×";
+  font-family: fantasy, sans-serif;
+  color: red;
+  position: absolute;
+  opacity: 0;
 }
 span.details-span {
-    color: var(--primary-color);
-    margin-right: .5rem;
-    font-size: 15px;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  font-size: 15px;
 }
 .our-location-service span {
-    display: block;
-    margin: .7rem 0 1rem;
+  display: block;
+  margin: 0.7rem 0 1rem;
 }
 
 .food-section {
-    display: flex;
-    flex-flow:column nowrap;
-    
+  display: flex;
+  flex-flow: column nowrap;
 }
 .food-section .food-item {
-    width: clamp(220px,65%,450px);
-    border: 1px solid rgba(128,128,128,.37);
-    padding: .8rem .8rem 1rem;
-    border-radius: 5px;
-    background-size: cover;
-    cursor: pointer;
-    position: relative;
+  width: clamp(220px, 65%, 450px);
+  border: 1px solid rgba(128, 128, 128, 0.37);
+  padding: 0.8rem 0.8rem 1rem;
+  border-radius: 5px;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
 }
 .food-item .food-img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 5px;
-    filter: brightness(.73);
-    -webkit-filter: brightness(.73);
-    -moz-filter: brightness(.73);
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: brightness(0.73);
+  -webkit-filter: brightness(0.73);
+  -moz-filter: brightness(0.73);
 }
 .food-item > footer {
-    width: 100%;
-    margin-top: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .food-item .food-price {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-left: 2rem; 
-    position: relative;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  position: relative;
 }
 .food-item .food-price::after {
-    content: 'تومان';
-    color: var(--primary-color);
-    position: absolute;
-    left: -2rem;
-    top: .35rem;
-    font-size: .8rem;    
+  content: "تومان";
+  color: var(--primary-color);
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  font-size: 0.8rem;
 }
 .food-item .food-count {
-    color: var(--primary-color);
-    margin-right: .3rem;
-    font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-right: 0.3rem;
+  font-size: 1.1rem;
 }
 .food-item .food-restaurantName {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 .food-item .food-name {
-    display: inline-block;
-    margin-bottom: .3rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
 }
-.food-item:hover .food-toolbar{
-    transform: translateY(0);
-    pointer-events: all;
-    opacity: 1;
+.food-item:hover .food-toolbar {
+  transform: translateY(0);
+  pointer-events: all;
+  opacity: 1;
 }
 .food-item .food-toolbar {
-    display: flex;
-    flex-flow: row wrap;
-    position: absolute;
-    width: 155px;
-    left: -155px;
-    top: 0;
-    gap: .2rem;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(15px);
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  width: 155px;
+  left: -155px;
+  top: 0;
+  gap: 0.2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
 }
 .food-item .food-toolbar button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    font-family: Vazir;
-    padding-right: .3rem;
-    border: 0;
-    cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-family: Vazir;
+  padding-right: 0.3rem;
+  border: 0;
+  cursor: pointer;
 }
 .food-item .food-toolbar button:hover {
-    transform: translate(-5px);
+  transform: translate(-5px);
 }
-.food-item .food-toolbar button:hover .hero-icons{
-    stroke: #fff;
-    fill: var(--active-item-color);
+.food-item .food-toolbar button:hover .hero-icons {
+  stroke: #fff;
+  fill: var(--active-item-color);
 }
 .food-item .food-toolbar .hero-icons {
-    width: 32px;
-    transition: none    ;
-    margin-left: .32rem;
-    stroke: var(--active-item-color);
+  width: 32px;
+  transition: none;
+  margin-left: 0.32rem;
+  stroke: var(--active-item-color);
 }
 .coupon-section .coupon-format {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: .4rem;
-    background-color: rgba(134, 4, 194,.13);
-    padding: 1rem 1.4rem;
-    border-radius: 5px;
-    border: 2px solid rgba(134, 4, 194,.13);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0.4rem;
+  background-color: rgba(134, 4, 194, 0.13);
+  padding: 1rem 1.4rem;
+  border-radius: 5px;
+  border: 2px solid rgba(134, 4, 194, 0.13);
 }
 .coupon-format .highlight {
-    color: var(--active-item-color);
-    text-decoration: underline;
+  color: var(--active-item-color);
+  text-decoration: underline;
 }
 .coupon-format > div {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 input#coupon-freeRate {
-    width: 120px ;
+  width: 120px;
 }
 
- .form-input {
-    margin: .5rem 0;
-    color: var(--dark-color-text);
-    cursor: pointer;
+.form-input {
+  margin: 0.5rem 0;
+  color: var(--dark-color-text);
+  cursor: pointer;
 }
 .form-input > * {
-    margin: 0 .37rem;
+  margin: 0 0.37rem;
 }
-.form-input input{
-    width: 55px;
-    height: 30px;
-    padding: 2px 8px;
-    border: 1px solid rgba(128, 128, 128, 7.37);
-    border-radius: 4px;
-    font-family: Vazir-Digit,sans-serif;
+.form-input input {
+  width: 55px;
+  height: 30px;
+  padding: 2px 8px;
+  border: 1px solid rgba(128, 128, 128, 7.37);
+  border-radius: 4px;
+  font-family: Vazir-Digit, sans-serif;
 }
 .form-input select {
-    border: 1px solid rgba(128, 128, 128, 7.37);
-    font-family: Vazir;
-    border-radius: 4px;
-    margin: .2rem;
-    padding: 0 .2rem;
-    height: 30px;
+  border: 1px solid rgba(128, 128, 128, 7.37);
+  font-family: Vazir;
+  border-radius: 4px;
+  margin: 0.2rem;
+  padding: 0 0.2rem;
+  height: 30px;
 }
 .form-input input:focus,
-.form-input select:focus{
-    outline-color: var(--primary-color);
+.form-input select:focus {
+  outline-color: var(--primary-color);
 }
 .form-input select option {
-    color: var(--primary-color);
-    background-color: #fff;
+  color: var(--primary-color);
+  background-color: #fff;
 }
 .form-input select option:hover {
-    color: #fff;
-    background-color: var(--primary-color);
+  color: #fff;
+  background-color: var(--primary-color);
 }
 .coupon-section .insert-coupon {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: .8rem;
-    margin: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 1rem 0;
 }
 
 .create-coupon-btn,
 .create-newFood-btn {
-    border: 0;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: .6rem 1.3rem;
-    color: #fff;
-    font-family: Vazir;
-    background-color: var(--submit-color);
+  border: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.6rem 1.3rem;
+  color: #fff;
+  font-family: Vazir;
+  background-color: var(--submit-color);
 }
 
 .create-coupon-btn:hover,
 .create-newFood-btn:hover {
-    background-color: rgb(4, 165, 119);
-
+  background-color: rgb(4, 165, 119);
 }
 .newFood-section .form-input {
-    width: 100%;  
+  width: 100%;
 }
 .newFood-section .form-input input {
-    margin-top: .55rem;
-    width: clamp(250px,48%,500px);
-    height: 34px;
-    padding: 2px 8px;
-    border: 1px solid rgba(128, 128, 128, 7.37);
-    border-radius: 4px;
-    font-family: Vazir-Digit,sans-serif;
+  margin-top: 0.55rem;
+  width: clamp(250px, 48%, 500px);
+  height: 34px;
+  padding: 2px 8px;
+  border: 1px solid rgba(128, 128, 128, 7.37);
+  border-radius: 4px;
+  font-family: Vazir-Digit, sans-serif;
 }
 .create-newFood-btn {
-    align-self: flex-end;
+  align-self: flex-end;
 }
-.newFood-section >form {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: .8rem;
+.newFood-section > form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.8rem;
 }
