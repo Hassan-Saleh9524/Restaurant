@@ -3,10 +3,10 @@ import {createContext, useState} from 'react';
 import background from '../../../../asset/images/kebab-background.jpg';
 import FoodToolbar from "./FoodToolbar";
 const  foodCountContext = createContext(null);
-export default function FoodItem() {
+export default function FoodItem(props) {
     const [foodCount, setFoodCount] = useState(12)
     return (
-        <div className="food-item">
+        <div className={`food-item ${props.className}`}>
             <img src={background} alt="عکس غذا" className="food-img" />
             <strong className="food-name">کباب سلطانی با پلو با فلان و بسار 15 عدد رب گوچه</strong>
             <p className="food-restaurantName">رستوران سارای</p>
