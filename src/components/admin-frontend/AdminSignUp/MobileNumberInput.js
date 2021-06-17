@@ -1,30 +1,43 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import AddMobileNumber from './AddMobileNumber';
+import { AdminContext } from '../AdminContext';
 export default function MobileNumberInput(props) {
     const { inputId, labelValue, placeholder, inputType } = { ...props };
     const [numberTemplate, setNumberTemplate] = useState([]);
+    const [restaurantContext, setRestaurantContext] = useContext(AdminContext);
 
-    const addNumber = () => {
+    function addNumber() {
         let input_number = document.getElementById('restaurant-callNumber').value;
         if (input_number === '') return;
-        setNumberTemplate(prevNumber => {
-            return (
-                [...prevNumber,
-                    input_number]
-            )
+       let updated_number = [...numberTemplate,input_number]
+        setNumberTemplate(updated_number)
+        setRestaurantContext({
+            ...restaurantContext,
+            mobileNumbers: updated_number
+            
         })
     }
-    const removeNumber = (event) => {
+    
+    function removeNumber(event){
         let cleanNumbers = numberTemplate.filter((num) => {
             return num !== event.target.innerHTML
         })
         setNumberTemplate(cleanNumbers)
+        
+
+        setRestaurantContext({
+            ...restaurantContext,
+            mobileNumbers: cleanNumbers
+            
+        })
+                
     }
     let added_numbers = numberTemplate.map((num, i) => {
         return <AddMobileNumber number={num} key={i} onClick={removeNumber} />
 
     })
 
+    
     return (
         <label htmlFor={inputId} className="form-input mobileNumber-label">
             {labelValue}: <br />
@@ -32,7 +45,8 @@ export default function MobileNumberInput(props) {
 
             <button type="button" className="addMobileNumber-btn" onClick={addNumber}>اضافه</button>
             {
-                added_numbers}
+                added_numbers
+                }
         </label>
     )
 
