@@ -5,7 +5,7 @@ export default function CouponFormat(props) {
             return (
                 <div className="coupon-format format-one">
                     <div>
-                        به ازای خرید هر <span className="highlight"> {foodCount} </span> پرس از<span className="highlight">  {foodName} </span>، <span className="highlight"> {discountRate} </span> تخفیف اعمال میشود.
+                        به ازای خرید هر <span className="highlight"> {foodCount} </span> پرس از<span className="highlight">  {foodName} </span>، <span className="highlight"> {discountRate} % </span> تخفیف اعمال میشود.
                     </div>
                 </div>
             );
