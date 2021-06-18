@@ -238,9 +238,13 @@ span.details-span {
   border-radius: 5px;
   border: 2px solid rgba(134, 4, 194, 0.13);
 }
+.coupon-format.format-one {
+  background-color: rgba(221, 13, 152, .13);
+  border: 2px solid rgba(221, 13, 152, 0.13);
+
+}
 .coupon-format .highlight {
   color: var(--active-item-color);
-  text-decoration: underline;
 }
 .coupon-format > div {
   margin-right: 1rem;
