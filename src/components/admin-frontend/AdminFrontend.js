@@ -59,9 +59,9 @@ export default function AdminFrontend() {
                         <AdminPanel />
                     </SectionsContext.Provider>
                 <AdminContext.Provider value={restaurantContext}>
-
-
+                
                    {activeSection}
+                    
                 </AdminContext.Provider>
             </div>
 

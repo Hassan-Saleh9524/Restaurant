@@ -237,6 +237,23 @@ span.details-span {
   padding: 1rem 1.4rem;
   border-radius: 5px;
   border: 2px solid rgba(134, 4, 194, 0.13);
+  cursor: pointer;
+  position: relative;
+}
+
+.coupon-format .close-btn {
+  position: absolute;
+  top: .75rem;
+  left: .5rem;
+  cursor: pointer;
+  color: red;
+  background-color: transparent;
+  border: 0;
+  font-size: 2rem;
+  opacity: 0;
+}
+.coupon-format:hover .close-btn {
+  opacity: 1;
 }
 .coupon-format.format-one {
   background-color: rgba(221, 13, 152, .13);

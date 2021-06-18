@@ -1,35 +1,65 @@
-import React,{useState} from 'react';
+import { useState } from 'react';
 import CouponFormat from './CouponFormat';
 export default function CouponSection() {
+    const [couponArray, setCouponArray] = useState([]);
+    const [coupon, setCoupon] = useState({
+        foodCount: '',
+        foodName: '',
+        discountRate: '',
+        formatType: '',
+        onClick: '',
+        freeRate: ''
+    });
+    const handleFoodCount = (event) => {
+        let current_count = event.target.value;
+        setCoupon({
+            ...coupon,
+            foodCount: current_count
+        })
+    }
+    const handleFoodName = (event) => {
+        let current_name = event.target.value;
+        setCoupon({
+            ...coupon,
+            foodName: current_name
+        })
+    }
+    const handleDiscountRate = (event) => {
+        let current_discount = event.target.value;
+        setCoupon({
+            ...coupon,
+            discountRate: current_discount
+        })
+    }
+    const handleFreeRate = (event) => {
+        let current_freeRate = event.target.value;
+        setCoupon({
+            ...coupon,
+            freeRate: current_freeRate
+        })
+    }
+    function addCouponForamt(formatType) {
     
-    const [couponFormats, setCouponFormats] = useState([]);
-    const addCouponForamt =(event)=> {
-        let coupon_freeRate= document.querySelector('#coupon-freeRate').value;
-        let coupon_foodCount = document.querySelector('#coupon-foodCount').value;
-        let coupon_foodName= document.querySelector('#coupon-foodName').value;
-        let coupon_discountRate= document.querySelector('#coupon-discountRate').value;
 
-        let isFormatOne= event.target.classList.contains('format-one'); // to determinate create coupon instanse form format-one or format-two
-        if (isFormatOne) {
-            
-            setCouponFormats([
-                ...couponFormats,
-                <CouponFormat foodCount={coupon_foodCount}
-                              foodName={coupon_foodName}
-                              discountRate={coupon_discountRate}
-                              formatType="format-one" 
-                              key={new Date().getTime()}/> // use time for create unique key 
-            ])
-        }else { // that means it is format-two
-            
-            setCouponFormats([
-                ...couponFormats,
-                <CouponFormat freeRate={coupon_freeRate}
-                              formatType="format-Two" 
-                              key={new Date().getTime()}
-                              />
-            ])
-        }
+        setCouponArray(
+            [...couponArray,
+            {
+                ...coupon,
+                formatType: formatType,
+                id: new Date().getTime()
+            }]
+        )        
+    }
+    function removeCouponFormat(id) {
+       
+       setCouponArray(
+
+           couponArray.filter(coupon=> {
+               return coupon.id !== id
+            })
+            ) 
+        
+
     }
     return (
         <section className="coupon-section panel-section">
@@ -44,12 +74,12 @@ export default function CouponSection() {
                 <div className="insert-coupon">
                     <label htmlFor="coupon-foodCount" className="form-input">
                         تعداد:
-                        <input type="number" id="coupon-foodCount" min={1} />
+                        <input type="number" id="coupon-foodCount" min={1} onInput={handleFoodCount} />
                     </label>
                     <label htmlFor="coupon-foodName" className="form-input">
                         نام غذا:
-                        <select id="coupon-foodName">
-                            <option value="کباب سلطانی">
+                        <select id="coupon-foodName" onInput={handleFoodName}>
+                            <option value="کباب سلطانی" defaultChecked>
                                 کباب سلطانی
                             </option>
                             <option value="کباب بختیاری">
@@ -62,26 +92,43 @@ export default function CouponSection() {
                     </label>
                     <label htmlFor="coupon-discountRate" className="form-input">
                         میزان تخفیف به درصد:
-                        <input type="number" id="coupon-discountRate" min={0} />
+                        <input type="number" id="coupon-discountRate" min={0} onInput={handleDiscountRate} />
                     </label>
-                    <button type="button" className="create-coupon-btn format-one" onClick={addCouponForamt}>ایجاد</button>
+                    <button type="button" className="create-coupon-btn format-one" onClick={() => addCouponForamt('format-one')}>ایجاد</button>
                 </div>
                 <div className="coupon-format format-two">
                     فرمت دوم:
                     <div>
-                        خرید بالای<span className="highlight"> میزان هزینه </span>، هزینه ی سس و نوشابه رایگان! 
+                        خرید بالای<span className="highlight"> میزان هزینه </span>، هزینه ی سس و نوشابه رایگان!
                     </div>
                 </div>
                 <div className="insert-coupon">
-                        
+
                     <label htmlFor="coupon-freeRate" className="form-input">
-                        میزان هزینه به ریال: 
-                        <input type="number" id="coupon-freeRate" min={0} />
+                        میزان هزینه به ریال:
+                        <input type="number" id="coupon-freeRate" min={0} onInput={handleFreeRate} />
                     </label>
-                    <button type="button" className="create-coupon-btn format-two" onClick={addCouponForamt}>ایجاد</button>
+                    <button type="button" className="create-coupon-btn format-two" onClick={() => addCouponForamt('format-two')}>ایجاد</button>
                 </div>
-                {couponFormats}
-            
+
+
+                {
+
+                    couponArray.map((coupon, index) => {
+                        return <CouponFormat foodCount={coupon.foodCount}
+                            foodName={coupon.foodName}
+                            discountRate={coupon.discountRate}
+                            formatType={coupon.formatType}
+                            onClick={removeCouponFormat}
+                            key={index}
+                            id={coupon.id}
+                            freeRate={coupon.freeRate}
+                        />
+                    })
+                }
+
+
+
             </form>
         </section>
     )
