@@ -9,7 +9,6 @@ export default function FoodSection() {
     // const [foodItems, setFoodItems] = useState(newFoodContext)
 
     const removeFood=(id)=> {
-        console.log(id,newFoodContext)
         let new_list = newFoodContext.filter(food=> food.foodId !== id)
         setNewFoodContext(new_list)
         
