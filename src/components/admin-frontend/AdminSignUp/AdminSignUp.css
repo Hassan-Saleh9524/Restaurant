@@ -5,15 +5,19 @@
 }
 
 .admin-signUp-form {
-    width: 98%;
-    margin: .5rem 0;
+    width: 100%;
     border: 1px solid rgba(128, 128, 128, 0.37);
     border-radius: 5px;
     padding: 1.3rem ;
     display: flex;
     flex-flow: column nowrap;
     opacity: 1;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 3;
 }
+
 .admin-signUp-form .form-input {
     margin: .5rem 0;
     color: var(--dark-color-text);
@@ -85,6 +89,7 @@
 .create-restaurant-btn {
     align-self: flex-end;
     border: 0;
+    margin-top: 1rem;
     cursor: pointer;
     border-radius: 4px;
     padding: .6rem 1.3rem;

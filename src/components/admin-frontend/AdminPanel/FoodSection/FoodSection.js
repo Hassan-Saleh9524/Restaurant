@@ -28,7 +28,9 @@ export default function FoodSection() {
                             onClick={removeFood}
                         />
                     })
-                }
+                
+                
+                } 
             </FoodContext.Provider>
         </section>
     )

@@ -1,7 +1,8 @@
 .admin-main {
     display: flex;
     flex-flow: column nowrap;
-    
+    align-items: center;
+    row-gap: 1rem;
 }
 .admin-main .admin-header {
     display: flex;
@@ -11,7 +12,7 @@
     height: 134px;
     background-size: cover;
     background-position: 50%;
-    background-color: rgba(27, 27, 27, 0.4);
+    background-color: rgba(27, 27, 27, 0.45);
     background-blend-mode: darken;
     color: #fff;
     background-image: url("../../asset/images/admin-background.jpg");
@@ -20,3 +21,4 @@
     margin: 0;
     cursor: pointer;
 }
+

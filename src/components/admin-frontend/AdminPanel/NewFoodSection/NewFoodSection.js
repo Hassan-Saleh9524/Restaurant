@@ -62,6 +62,8 @@ export default function NewFoodSection() {
             foodDetail
         ]
         )
+
+        alert('غذای جدید اضافه شد، تب غذاها را چک کنید')
     }
     return (
         <section className="newFood-section panel-section">
@@ -76,11 +78,11 @@ export default function NewFoodSection() {
                 </label>
                 <label htmlFor="newFood-price" className="form-input">
                     قیمت هر غذا به تومان: <br />
-                    <input type="number" id="newFood-price" onInput={handleNewPrice} />
+                    <input type="number" id="newFood-price" min={0} onInput={handleNewPrice} />
                 </label>
                 <label htmlFor="newFood-inventory" className="form-input">
                     تعداد موجودی:  <br />
-                    <input type="number" id="newFood-inventory" onInput={handleNewCount} />
+                    <input type="number" id="newFood-inventory" min={1} onInput={handleNewCount} />
                 </label>
                 <label htmlFor="newFood-image" className="form-input">
                     عکس غذا:  <br />

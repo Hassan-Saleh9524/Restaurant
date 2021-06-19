@@ -4,7 +4,7 @@ export default function FixedShippingCostInput(props) {
     return (
         <label htmlFor={inputId} className="form-input">
             {labelValue}: <br/>
-            <input type={inputType} id={inputId} onInput={onInput}  className="shippingCost-input" />
+            <input type={inputType} id={inputId} onInput={onInput} min={0}  className="shippingCost-input" />
           
         </label>
     )

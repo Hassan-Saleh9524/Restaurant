@@ -46,8 +46,11 @@ export default function AdminSignUp() {
         }
         )
     }
-    const [display, setDisplay] = useState(false);
-    const [formClassName, setFormClassName] = useState('');
+    const [display, setDisplay] = useState({
+        className: null
+    });
+    // const [display, setDisplay] = useState(false);
+    // const [formClassName, setFormClassName] = useState('');
     const activeDates = ['روزهای فرد', 'روزهای زوج', 'تمام روزها'];
     const workingTimes = [
         '10 صبح الی 23 شب',
@@ -57,18 +60,18 @@ export default function AdminSignUp() {
 
     const toggleFormDisplay = () => {
 
-        if (display) {
-            setFormClassName('close');
-            setDisplay(false);
-        } else {
-            setFormClassName('');
-            setDisplay(true);
-        }
+       
+            setDisplay(
+                {
+                    className: display.className === 'close ' ? 'close' : 'close '
+                }
+            )
+        
     }
 
 
     return (
-        <form className={`admin-signUp-form ${formClassName}`}>
+        <form className={`admin-signUp-form ${display.className}`}>
             <FormInput labelValue="ایمیل"
                 inputType="email"
                 inputId="admin-email"
@@ -123,7 +126,7 @@ export default function AdminSignUp() {
                 onInput={changeShippingCost}
             />
             <SubmitButton inputId="create-restaurant-btn"
-                inputType="submit"
+                inputType="button"
                 onClick={toggleFormDisplay}
             />
         </form>

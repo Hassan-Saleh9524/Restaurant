@@ -78,17 +78,15 @@ export default function CouponSection() {
                     </label>
                     <label htmlFor="coupon-foodName" className="form-input">
                         نام غذا:
-                        <select id="coupon-foodName" onInput={handleFoodName}>
+                        <input list="coupon-foodName" name="coupon-foodName" placeholder="انتخاب غذا"/>
+                        <datalist id="coupon-foodName" onInput={handleFoodName}>
                             <option value="کباب سلطانی" defaultChecked>
-                                کباب سلطانی
                             </option>
                             <option value="کباب بختیاری">
-                                کباب بختیاری
                             </option>
                             <option value="خورشت آلو">
-                                خورشت آلو
                             </option>
-                        </select>
+                        </datalist>
                     </label>
                     <label htmlFor="coupon-discountRate" className="form-input">
                         میزان تخفیف به درصد:

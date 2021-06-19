@@ -41,11 +41,10 @@
 }
 
 .panel-section-container {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 1.2rem;
   gap: 1rem;
 }
 .panel-section-container .myRestaurant-section {
@@ -61,6 +60,13 @@
   color: var(--dark-color-text);
   gap: 1rem;
   font-family: "Vazir-Digit";
+  margin-bottom: 2rem;
+  position: relative;
+}
+.panel-section .pen-label {
+position: absolute;
+left: 10px;
+top: 20px;
 }
 .myRestaurant-section .restaurant-name {
   width: 100%;
@@ -71,6 +77,7 @@
 .myRestaurant-section .hero-icons {
   width: 23px;
 }
+
 .restaurant-detail-item {
   display: flex;
   align-items: center;
@@ -278,6 +285,9 @@ input#coupon-freeRate {
 .form-input > * {
   margin: 0 0.37rem;
 }
+.panel-section .form-input input[list] {
+width: 140px;
+}
 .form-input input {
   width: 55px;
   height: 30px;
@@ -353,3 +363,31 @@ input#coupon-freeRate {
   flex-flow: column nowrap;
   gap: 0.8rem;
 }
+
+@media screen and (max-width: 610px) {
+  .panel-section-container .panel-section {
+    width: 100%;
+  }
+  .panel-section-container .admin-panel {
+    height: auto;
+    width: 100%;
+    display: flex;
+    right: 0;
+    position: fixed;
+  }
+  .admin-panel .panel-item {
+    flex-basis: 25%;
+    font-size: .7rem;
+    padding: .7rem .3rem ;
+  }
+  .admin-panel .panel-item.active,
+  .admin-panel .panel-item:hover{
+    transform: translateX(0) translateY(5px);
+    background-color: rgb(242, 222, 252);
+  }
+  .admin-panel .hero-icons {
+    width: 30px;
+    margin-left: .3rem;
+  }
+}
+
