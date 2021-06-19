@@ -8,6 +8,8 @@ import NewFoodSection from './AdminPanel/NewFoodSection/NewFoodSection';
 import CouponSection from './AdminPanel/CouponSection/CouponSection';
 import { AdminContext } from './AdminContext';
 import { SectionsContext } from './SectionsContext';
+import { NewFoodContext } from './AdminPanel/NewFoodSection/NewFoodContext';
+// import background from '../../asset/images/kebab-background.jpg';
 import './AdminFrontend.css';
 
 export default function AdminFrontend() {
@@ -20,6 +22,7 @@ export default function AdminFrontend() {
         activeDates: 'همه ی روز ها',
         shippingCost: 'فلان قدر '
     };
+    const [newFoodContext, setNewFoodContext] = useState([])
     let activeSection=null;
     const [section, setSection] = useState(0);
     const [restaurantContext, setRestaurantContext] = useState(default_restaurant_datails);
@@ -59,9 +62,11 @@ export default function AdminFrontend() {
                         <AdminPanel />
                     </SectionsContext.Provider>
                 <AdminContext.Provider value={restaurantContext}>
-                
+                <NewFoodContext.Provider value={[newFoodContext, setNewFoodContext]}>
+                    
                    {activeSection}
                     
+                </NewFoodContext.Provider>
                 </AdminContext.Provider>
             </div>
 

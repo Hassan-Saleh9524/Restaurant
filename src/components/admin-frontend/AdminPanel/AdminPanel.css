@@ -342,6 +342,9 @@ input#coupon-freeRate {
   border-radius: 4px;
   font-family: Vazir-Digit, sans-serif;
 }
+.newFood-section .form-input input[type="file"] {
+  border: 0;
+}
 .create-newFood-btn {
   align-self: flex-end;
 }
