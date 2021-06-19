@@ -22,6 +22,14 @@ export default function AdminFrontend() {
         activeDates: 'همه ی روز ها',
         shippingCost: 'فلان قدر '
     };
+    /*{
+        foodName: 'چلو کباب بختیاری',
+        restaurantName: 'رستوران دشت سارا',
+        foodPrice: '45000',
+        foodCount: 22,
+        foodId: new Date().getTime(),
+        foodImage: ''
+    }*/
     const [newFoodContext, setNewFoodContext] = useState([])
     let activeSection=null;
     const [section, setSection] = useState(0);

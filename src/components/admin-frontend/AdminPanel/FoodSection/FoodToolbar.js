@@ -12,7 +12,7 @@ const time_icon = <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 her
 </svg>;
 
 
-export default function FoodToolbar() {
+export default function FoodToolbar(props) {
     const [foodCount, setFoodCount] = useContext(foodCountContext);
     let [disableStatus, setDisableStatus] = useState({
         status: false,
@@ -48,7 +48,7 @@ export default function FoodToolbar() {
 
     return (
         <div className="food-toolbar">
-            <button >
+            <button onClick={()=>props.removeFood(props.foodId)} >
                 {remove_icon}
                 حذف غذا
             </button>

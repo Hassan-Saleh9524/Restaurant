@@ -8,7 +8,8 @@ export default function NewFoodSection() {
         restaurantName: '',
         foodPrice: '',
         foodCount: 0,
-        foodImage: ''
+        foodImage: '',
+        foodId: ''
     })
 
     // const [newFood, setNewFood] = useContext(NewFoodContext)
@@ -49,8 +50,12 @@ export default function NewFoodSection() {
             foodImage: current_image
         })
     }
-
+    
     const passNewFoodInfo = () => {
+        setFoodDetail({
+            ...foodDetail,
+            foodId: new Date().getTime()
+        })
         
         setNewFoodContext([
             ...newFoodContext,

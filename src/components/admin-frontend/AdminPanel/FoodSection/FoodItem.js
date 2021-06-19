@@ -4,8 +4,8 @@ import background from '../../../../asset/images/kebab-background.jpg';
 import FoodToolbar from "./FoodToolbar";
 const  foodCountContext = createContext(null);
 export default function FoodItem(props) {
-    const {foodName, restaurantName, foodPrice, foodCount, foodImage,foodId} = {...props};
-    
+    const {foodName, restaurantName, foodPrice
+        , foodCount, foodImage,foodId, onClick} = {...props};
     const [food_count, setFoodCount] = useState(foodCount)
     return (
         <div className={`food-item`}>
@@ -22,7 +22,7 @@ export default function FoodItem(props) {
             </footer>
             <foodCountContext.Provider value={[food_count,setFoodCount]}>
 
-            <FoodToolbar foodId={foodId}/>
+            <FoodToolbar removeFood={onClick} foodId={foodId}/>
             </foodCountContext.Provider>
         </div>
     )
