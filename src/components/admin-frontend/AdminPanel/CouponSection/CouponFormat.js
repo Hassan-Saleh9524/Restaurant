@@ -13,6 +13,7 @@ export default function CouponFormat(props) {
         default:
             return (
 
+                
                 <div className="coupon-format format-two" >
                     <button className="close-btn" type="button" onClick={(()=>onClick(id))}>&times;</button>
                     <div>
